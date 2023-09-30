@@ -1,12 +1,11 @@
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from "chart.js";
+import { Chart as ChartJS, CategoryScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from "chart.js";
 import { Line } from "react-chartjs-2";
 import TitleCard from "../../../components/Cards/TitleCard";
-import { TRANSACTIONS } from "../../../utils/dummyData";
 import { fetchTransactions } from "../../slices/transactionsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend);
+ChartJS.register(CategoryScale, PointElement, LineElement, Title, Tooltip, Filler, Legend);
 
 function LineChart() {
 	const { transactions, loading } = useSelector((state) => state.transactions);

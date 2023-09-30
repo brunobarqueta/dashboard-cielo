@@ -3,7 +3,7 @@ import TitleCard from "../../../components/Cards/TitleCard";
 import { useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 
-function UserChannels() {
+function LastTransactions() {
 
     const { transactions, loading } = useSelector((state) => state.transactions);
 
@@ -19,10 +19,10 @@ function UserChannels() {
 				<table className="table w-full">
 					<thead>
 						<tr>
-							<th></th>
-							<th className="normal-case">Payment Type</th>
-							<th className="normal-case">Card Brand</th>
-							<th className="normal-case">Gross Amount</th>
+							<th data-testid="table-header"></th>
+							<th data-testid="payment-type-header" className="normal-case">Payment Type</th>
+							<th data-testid="card-brand-header" className="normal-case">Card Brand</th>
+							<th data-testid="gross-amount-header" className="normal-case">Gross Amount</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -30,9 +30,9 @@ function UserChannels() {
 							return (
 								<tr key={k}>
 									<th>{k + 1}</th>
-									<td>{item.paymentType}</td>
-									<td>{item.cardBrand}</td>
-									<td>${item.grossAmount.toFixed(2)}</td>
+									<td data-testid={`payment-type-${k}`}>{item.paymentType}</td>
+									<td data-testid={`card-brand-${k}`}>{item.cardBrand}</td>
+									<td data-testid={`gross-amount-${k}`}>${item.grossAmount.toFixed(2)}</td>
 								</tr>
 							);
 						})}
@@ -46,4 +46,4 @@ function UserChannels() {
 	);
 }
 
-export default UserChannels;
+export default LastTransactions;

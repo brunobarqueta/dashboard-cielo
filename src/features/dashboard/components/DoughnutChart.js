@@ -49,7 +49,7 @@ function DoughnutChart() {
 	};
 
 	return (
-		<TitleCard title={"Orders by Card Brand"}>
+		<TitleCard title={"Transactions by Card Brand"}>
 			<Doughnut options={options} data={data} />
 		</TitleCard>
 	);
