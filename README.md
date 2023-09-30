@@ -49,9 +49,7 @@ npm test
 Below are the features of the dashboard.
 
 - **Dashboard Page**: The user can view and analyze graphs and other data, hover on them to see more details and numbers, and also see a preview of the Transactions page, showing the last 10 transactions.
-<br>
 - **Transaction Page**: The user can see a table with various information about the transactions, it's also possible to search for transactions by card brand.
-<br>
 - **Dark Mode**: On the right top side of the screen the user can see a Sun/Moon icon that when clicked change the theme of the application.
 
 ## Libs used
